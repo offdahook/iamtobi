@@ -127,7 +127,7 @@ nav ul li:active{
 }
 
 #jumbo {
-    background-image: cover;
+    background-size: cover;
     background-image: url(/stock/jumbo/bg.jpg);
     background-position: center;
 }
