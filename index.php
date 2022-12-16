@@ -4,7 +4,6 @@
 
 
     <section id="jumbo" class="jumbo">
-        <img src="/stock/jumbo/bg.jpg" alt="" srcset="" id="jumbotron">
     </section>
 
     <section id="about" class="space-top">
