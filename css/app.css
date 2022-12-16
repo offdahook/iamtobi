@@ -1,0 +1,239 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding:0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root {
+    --highlightBlue: #3da6a8;
+    --highlightRed: #722f46;
+  }
+
+ nav ul li a:hover, .forgot-password a span:hover,
+ form input[type=submit]:hover  {
+    transition: all 0.3s ease-in;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: var(--highlightBlue);
+}
+
+/*
+{
+    color: var(--highlightRed);
+}
+*/
+
+body {
+    background-color: #000;
+    color:white;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  height:50px;
+  width:100%;
+  top:0px;
+  background-color: rgba(0,0,0,0.0);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: space-around;
+}  
+
+.main-nav { grid-area: 1 / 1 / 2 / 2; display: flex;}
+.logo { grid-area: 1 / 2 / 2 / 3; display:grid; place-content: center;}
+.alt-nav { grid-area: 1 / 3 / 2 / 4; display:flex;  justify-content: flex-end;}
+
+nav ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li {
+    float:left;
+    display: block;
+    padding:10px 20px;
+}
+
+nav ul li:active{
+    border-bottom: solid 2px var(--highlightBlue);
+}
+
+#logo {
+    height:100%;
+    /* padding:15px 20px 0 0;     */
+}
+
+#logo img {
+  max-width: 150px;
+}
+
+#jumbo {
+    background-image: cover;
+}
+
+section {
+    overflow:hidden;
+    width: 100vw;
+    min-height: 700px;;
+    max-height: 1080px;
+    padding: 0 30px;
+}
+
+#login {
+  position: relative;
+  margin-top: 100px;
+}
+
+.jumbo {
+    padding:0;
+}
+
+.space-top {
+    margin-top:30px;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+    height:80px;
+    width:100vw;
+    color:#999;
+}
+.spacer {
+ padding-top: 200px;
+}
+
+
+.center {
+    display:flex;
+    justify-content: center;
+    text-align:  center;
+}
+form {
+    width:80%;
+    max-width:500px;
+}
+
+form h3 {
+    padding:5px 10px;
+    width:100%;
+}
+form input[type=text], form input[type=password]  {
+    position: relative;
+    width:100%;
+    background-color: rgba(0,0,0,0.0);
+    border: solid 1px white;
+    margin: 10px 0;
+    padding:10px;
+    color:white;
+}
+
+form input[type=submit] {
+    width: 50%;
+    max-width: 150px;
+    float:left;
+    background-color: var(--highlightBlue);
+    padding:5px;
+    font-size: 0.7rem;
+    color:white;
+    margin-top:5px;
+}
+form input[type=submit]:hover{
+    background-color: var(--highlightRed);
+}
+
+form input:focus{
+    border: solid 1px var(--highlightBlue);
+}
+
+.forgot-password {
+    position: absolute;
+    color:var(--highlightBlue);
+    margin: -48px 0 0 365px;
+}
+
+.forgot-password a span {
+    color:var(--highlightBlue);
+    font-size: 0.7rem;
+}
+
+.forgot-password a span:hover {
+    color:var(--highlightRed)
+}
+
+.create-account {
+    float:right;
+    padding:10px 0;
+    font-size: 0.7rem;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: lightblue;
+  }
+  #logo img {
+    max-width: 100px;
+  }
+}
