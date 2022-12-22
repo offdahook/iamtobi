@@ -26,11 +26,16 @@
     </div>
     <div id="alt-nav">
         <ul class="social-nav">
-            <li class="social-nav-item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li class="social-nav-item"><a href="#" onclick="toggleSearchbar()"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li class="social-nav-item"><a href="login.php"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </div>  
 </nav>
+<div id="search-bar">
+    <form action="search.php">
+        <input type="search" autocomplete="off" name="search" id="search" placeholder="Gib deinen Suchbegriff ein...">
+    </form>
+</div>
 
 <body>
 

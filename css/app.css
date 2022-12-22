@@ -74,7 +74,7 @@
     text-decoration: none;
   }
 
-  a, input, input:hover {
+  a, input, input:hover, #search-bar {
     transition: all 0.3s ease-in-out;
   }
 
@@ -82,7 +82,7 @@
     Colours
   */
 
-  body, form input[type=text], form input[type=password] {
+  body, form input[type=text], form input[type=password], form input[type=search] {
     background-color: var(--dark);
   }
 
@@ -94,7 +94,7 @@
   background-color: var(--highlightRed);
 }*/
 
-body, a:hover {
+body, a:hover, form input[type=search] {
   color: var(--white);
 }
 
@@ -185,7 +185,7 @@ nav ul li {
     padding:10px 20px;
 }
 
-nav ul li:active{
+nav ul li:hover{
     border-bottom: solid 2px var(--highlightBlue);
 }
 
@@ -257,10 +257,41 @@ form input[type=submit]:hover{
     background-color: var(--highlightRed);
 }
 
+#search-bar {
+  position: absolute;
+  top:60px;
+  width:100%;
+  min-height:50px;
+  display:flex;
+  justify-content: center;
+  display:none;
+}
+
+#search-bar form {
+  min-width: 90%;
+}
+
+form input[type=search] {
+  width:100%;
+  min-height:50px;
+  max-height: 50px;
+  padding:5px 10px;
+  border:0;
+  -webkit-appearance: none;
+  border-radius:30px;
+  
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
 form input:focus{
     border: solid 1px var(--highlightBlue);
 }
-
 
 #inside-input {
   position: absolute;
