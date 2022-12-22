@@ -21,11 +21,7 @@ function toggleSearchbar(){
     else {
         searchbar.style.display = "flex"; 
         searchbarForm.focus(); 
-    }
-    
-    return false;
+    }    
 }
-
-
 
 window.onscroll = distanceToTop;

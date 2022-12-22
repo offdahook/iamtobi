@@ -17,8 +17,8 @@
 <nav class="navbar" id="navbar">
     <div id="main-nav">
         <ul class="main-nav">
-            <li class="nav-item"><a href="/">Über mich</a></li>
-            <li class="nav-item"><a href="blog.php">Blog</a></li>
+            <a href="/"><li class="nav-item">Über mich</li></a>
+            <a href="blog.php"><li class="nav-item">Blog</li></a>
         </ul>
     </div>
     <div id="logo" id="logo">
@@ -26,14 +26,16 @@
     </div>
     <div id="alt-nav">
         <ul class="social-nav">
-            <li class="social-nav-item"><a href="#" onclick="toggleSearchbar()"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-            <li class="social-nav-item"><a href="login.php"><i class="fa-solid fa-user"></i></a></li>
+            <a href="#" onclick="toggleSearchbar()"><li class="social-nav-item"><i class="fa-solid fa-magnifying-glass"></i></li></a>
+            <a href="login.php"><li class="social-nav-item"><i class="fa-solid fa-user"></i></li></a>
         </ul>
     </div>  
 </nav>
 <div id="search-bar">
     <form action="search.php">
         <input type="search" autocomplete="off" name="search" id="search" placeholder="Gib deinen Suchbegriff ein...">
+            <div id="closeSearch"><a href="#" onclick="toggleSearchbar()"><i class="fa-solid fa-xmark big-text"></i></a></div>
+        </input>
     </form>
 </div>
 

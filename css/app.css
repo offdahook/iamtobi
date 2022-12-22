@@ -70,6 +70,10 @@
     font-size: .75rem;
   }
 
+  .big-text {
+    font-size: 1.75rem;
+  }
+
   a {
     text-decoration: none;
   }
@@ -82,7 +86,7 @@
     Colours
   */
 
-  body, form input[type=text], form input[type=password], form input[type=search] {
+  body, form input[type=text], form input[type=password] {
     background-color: var(--dark);
   }
 
@@ -90,11 +94,11 @@
   background-color: var(--highlightBlue);
 }*/
 
-/*{
+.default-button:hover {
   background-color: var(--highlightRed);
-}*/
+}
 
-body, a:hover, form input[type=search] {
+body, a:hover, form input[type=search], .default-button:hover {
   color: var(--white);
 }
 
@@ -102,9 +106,9 @@ a {
   color: var(--highlightBlue);
 }
 
-/* {
+ {
   color: var(--highlightRed);
-}*/
+}
 
 
 /*
@@ -119,10 +123,6 @@ a {
   margin:15px 0;
   padding: 5px 0;
   float: left;
-}
-
-.default-button:hover{
-  background-color: var(--highlightRed);
 }
 
 .text-link {
@@ -264,7 +264,7 @@ form input[type=submit]:hover{
   min-height:50px;
   display:flex;
   justify-content: center;
-  display:none;
+  display:flex;
 }
 
 #search-bar form {
@@ -276,10 +276,15 @@ form input[type=search] {
   min-height:50px;
   max-height: 50px;
   padding:5px 10px;
-  border:0;
+  border:solid 1px var(--white);
+  background:rgba(255,255,255,0.2);
   -webkit-appearance: none;
   border-radius:30px;
   
+}
+
+form input[type=search]:selected, form input[type=search]:active, form input[type=search]:focus, form input[type=search]:focus-visible {
+  border:solid 1px var(--white);
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -289,8 +294,16 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance:none;
 }
 
-form input:focus{
-    border: solid 1px var(--highlightBlue);
+#closeSearch {
+  display: flex;
+  justify-content: flex-end;  
+}
+
+#closeSearch a i {
+  position: absolute;
+  z-index: 1;
+  margin:-38px 0;
+  right:30px;
 }
 
 #inside-input {
