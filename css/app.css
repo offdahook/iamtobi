@@ -55,8 +55,8 @@
   }
 
   :root {
-    --highlightBlue: #3da6a8;
-    --highlightRed: #722f46;
+    --highlightBlue: #009498;
+    --highlightRed: #4f0013;
   }
 
  .default-button, .default-button:hover, a:hover, a:hover > i{
@@ -161,6 +161,7 @@ section {
 
 .jumbo {
     padding:0;
+    height:100vh;
 }
 
 .space-top {
