@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="icon" type="image/x-icon" href="/stock/favicon.ico">
 
+    <script derefer src="js/app.js"></script>
+
     <title>i am tobi - playground</title>
 </head>
 
