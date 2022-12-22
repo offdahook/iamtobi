@@ -79,7 +79,7 @@
   }
 
   a, input, input:hover, #search-bar, .burger, .burger:hover {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in;
   }
 
   /*
@@ -106,14 +106,17 @@ a, .burger {
   color: var(--highlightBlue);
 }
 
- {
+ /* {
   color: var(--highlightRed);
-}
+} */
 
 
 /*
   Helper Classes
 */
+.hidden {
+  display: none !important;
+}
 
 .default-button {
   width: clamp(50px,100px,120px);
@@ -160,7 +163,7 @@ a, .burger {
 }
 .navbar {
   position: fixed;
-  height:50px;
+  height:auto;
   width:100%;
   top:0px;
   background-color: rgba(0,0,0,0.0);
@@ -194,6 +197,7 @@ nav ul li:hover{
 
 #logo {
     height:100%;
+    margin-top: 3px;
     /* padding:15px 20px 0 0;     */
 }
 
@@ -267,7 +271,6 @@ form input[type=submit]:hover{
   min-height:50px;
   display:flex;
   justify-content: center;
-  display:none;
 }
 
 #search-bar form {
@@ -281,9 +284,7 @@ form input[type=search] {
   padding:5px 10px;
   border:solid 1px var(--white);
   background:rgba(255,255,255,0.2);
-  -webkit-appearance: none;
-  border-radius:30px;
-  
+  border-radius:30px;  
 }
 
 form input[type=search]:selected, form input[type=search]:active, form input[type=search]:focus, form input[type=search]:focus-visible {
@@ -321,8 +322,63 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 @media only screen and (max-width: 700px) {
-  body {
-    background-color: lightblue;
+
+  #burger-menu {
+    position: absolute;
+    left:10px;
+    display: block;
   }
 
+  #burger-menu:hover {
+    cursor:pointer;
+  }
+
+  .responsive-pos {
+    left: auto !important;
+    right:20px;
+  }
+
+  .responsive-menu {
+    width: 90vw;
+    height: 100vh;
+    background: rgba(0,0,0,1.0);
+    left:0;
+    justify-content: flex-start;
+  }
+
+  .responsive-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-nav ul li {
+    width:100%;
+  }
+
+  #alt-nav {
+    justify-content: flex-start;
+  }
+
+  #main-nav {
+    margin-top: 250px;
+  }
+  #main-nav ul,  #alt-nav ul {
+    width:100%;
+  }
+
+  #search-bar {
+    z-index: 10;
+    top:150px;
+    width:85%;
+    margin-left:10px;
+  }
+
+  .menu-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  form {
+    width:100%;
+  }
 }

@@ -34,7 +34,7 @@
         </ul>
     </div>  
 </nav>
-<div id="search-bar">
+<div id="search-bar" class="hidden">
     <form action="search.php">
         <input type="search" autocomplete="off" name="search" id="search" placeholder="Gib deinen Suchbegriff ein...">
             <div id="closeSearch"><a href="#" onclick="toggleSearchbar()"><i class="fa-solid fa-xmark big-text"></i></a></div>
