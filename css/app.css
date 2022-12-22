@@ -14,8 +14,10 @@
   /*
     3. Allow percentage-based heights in the application
   */
-  html, body {
+  html {
     height: 100%;
+    width:100%;
+    overflow-x: hidden;
   }
   /*
     Typographic tweaks!
@@ -25,6 +27,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   /*
     6. Improve media defaults
@@ -59,36 +62,39 @@
     --highlightRed: #4f0013;
   }
 
- nav ul li a:hover, .forgot-password a span:hover,
- form input[type=submit]:hover  {
-    transition: all 0.3s ease-in;
-}
+  body {
+    font-size: 1rem;
+  }
 
-a {
+  .small-text {
+    font-size: .75rem;
+  }
+
+  a {
     text-decoration: none;
-}
+  }
 
-nav ul li a:hover {
-    color: var(--highlightBlue);
-}
+  a, input, input:hover {
+    transition: all 0.3s ease-in-out;
+  }
 
-/*
-  Colours
-*/
+  /*
+    Colours
+  */
 
-body {
-  background-color: var(--dark);
-}
+  body, form input[type=text], form input[type=password] {
+    background-color: var(--dark);
+  }
 
-{
+/*{
   background-color: var(--highlightBlue);
-}
-
-/* {
-  background-color: var(--highlightRed);
 }*/
 
-body {
+ {
+  background-color: var(--highlightRed);
+}
+
+body, a:hover {
   color: var(--white);
 }
 
@@ -96,7 +102,7 @@ a {
   color: var(--highlightBlue);
 }
 
-a:hover {
+ {
   color: var(--highlightRed);
 }
 
@@ -105,12 +111,49 @@ a:hover {
   Helper Classes
 */
 
-
-
-body {
-    overflow-x: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.default-button {
+  width: clamp(50px,100px,120px);
+  display:flex;
+  border: solid 1px #ffffff;
+  justify-content: center;
+  margin:15px 0;
+  padding: 5px 0;
+  float: left;
 }
+
+.default-button:hover{
+  background-color: var(--highlightRed);
+}
+
+.text-link {
+  display: flex;
+  justify-content: flex-end;
+  margin:5px 0;
+  padding: 5px 0;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.spacer {
+  padding-top: 200px;
+}
+
+.space-top {
+  margin-top:30px;
+}
+
+ 
+.center {
+     display:flex;
+     justify-content: center;
+     text-align:  center;
+ }
+
+/*
+  App CSS
+*/
 
 .navbar {
   position: fixed;
@@ -124,6 +167,7 @@ body {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   justify-content: space-around;
+  z-index:10;
 }  
 
 #main-nav { grid-area: 1 / 1 / 2 / 2; display: flex;}
@@ -155,13 +199,14 @@ nav ul li:active{
 }
 
 #jumbo {
+    height: 100vh;
     background-size: cover;
     background-image: url(/stock/jumbo/bg.jpg);
     background-position: center;
 }
 
 section {
-    overflow:hidden;
+    overflow: hidden;
     width: 100vw;
     min-height: 700px;;
     max-height: 1080px;
@@ -173,35 +218,17 @@ section {
   margin-top: 100px;
 }
 
-.jumbo {
-    padding:0;
-    height:100vh;
-}
-
-.space-top {
-    margin-top:30px;
-}
-
 footer{
     display:flex;
     justify-content: center;
     height:80px;
     width:100vw;
-    color:#999;
-}
-.spacer {
- padding-top: 200px;
 }
 
-
-.center {
-    display:flex;
-    justify-content: center;
-    text-align:  center;
-}
 form {
     width:80%;
     max-width:500px;
+    position: relative;
 }
 
 form h3 {
@@ -211,7 +238,6 @@ form h3 {
 form input[type=text], form input[type=password]  {
     position: relative;
     width:100%;
-    background-color: rgba(0,0,0,0.0);
     border: solid 1px white;
     margin: 10px 0;
     padding:10px;
@@ -224,7 +250,6 @@ form input[type=submit] {
     float:left;
     background-color: var(--highlightBlue);
     padding:5px;
-    font-size: 0.7rem;
     color:white;
     margin-top:5px;
 }
@@ -236,56 +261,11 @@ form input:focus{
     border: solid 1px var(--highlightBlue);
 }
 
-.forgot-password {
-    position: absolute;
-    color:var(--highlightBlue);
-    margin: -48px 0 0 365px;
-}
-
-.forgot-password a span {
-    color:var(--highlightBlue);
-    font-size: 0.7rem;
-}
-
-.forgot-password a span:hover {
-    color:var(--highlightRed)
-}
-
-.create-account {
-    float:right;
-    padding:10px 0;
-    font-size: 0.7rem;
-}
-
-
-.default-button {
-  width: clamp(50px,100px,120px);
-  display:flex;
-  border: solid 1px #ffffff;
-  justify-content: center;
-  margin:15px 0;
-  padding: 5px 0;
-  font-size: .8rem;
-  float: left;
-}
-
-.default-button:hover{
-  background-color: var(--highlightRed);
-}
-
-.text-link {
-  display: inline-flex;
-  justify-content: flex-end;
-  margin:15px 0;
-  padding: 5px 0;
-}
 
 #inside-input {
-display: grid;
-}
-
-.small-text {
-  font-size: .75rem;
+  position: absolute;
+  right:0px;
+  margin:-45px 10px 0 0;
 }
 
 
