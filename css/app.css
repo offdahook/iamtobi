@@ -90,9 +90,9 @@
   background-color: var(--highlightBlue);
 }*/
 
- {
+/*{
   background-color: var(--highlightRed);
-}
+}*/
 
 body, a:hover {
   color: var(--white);
@@ -102,9 +102,9 @@ a {
   color: var(--highlightBlue);
 }
 
- {
+/* {
   color: var(--highlightRed);
-}
+}*/
 
 
 /*
