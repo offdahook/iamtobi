@@ -1,8 +1,9 @@
 function distanceToTop(){
     var nav = document.getElementById('navbar')
+    var windowWidth = document.getElementById('jumbo').clientWidth;
 
-    if (window.pageYOffset > 10) {
-       nav.style.transition = "all 1s"
+    if (window.pageYOffset > 10 && windowWidth > 700) {
+       nav.style.transition = "all 1s"  
        nav.style.backgroundColor = 'rgba(0,0,0,1.0)'
     }
     else {
@@ -23,4 +24,9 @@ function toggleSearchbar(){
         searchbarForm.focus(); 
     }    
 }
+
+function toggleResponsiveMenu(){
+
+}
+
 window.onscroll = distanceToTop;

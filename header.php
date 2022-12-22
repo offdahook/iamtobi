@@ -14,7 +14,10 @@
     <title>i am tobi - playground</title>
 </head>
 
+
 <nav class="navbar" id="navbar">
+    <div id="burger-menu" class="burger big-text" onclick="toggleResponsiveMenu()"><i id="burger-icon" class="fa-sharp fa-solid fa-bars"></i></div>
+    
     <div id="main-nav">
         <ul class="main-nav">
             <a href="/"><li class="nav-item">Über mich</li></a>
