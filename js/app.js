@@ -23,5 +23,4 @@ function toggleSearchbar(){
         searchbarForm.focus(); 
     }    
 }
-
 window.onscroll = distanceToTop;

@@ -264,7 +264,7 @@ form input[type=submit]:hover{
   min-height:50px;
   display:flex;
   justify-content: center;
-  display:flex;
+  display:none;
 }
 
 #search-bar form {
@@ -296,14 +296,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #closeSearch {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
+  
 }
 
 #closeSearch a i {
   position: absolute;
   z-index: 1;
   margin:-38px 0;
-  right:30px;
+  right:5px;
+  width:50px;
 }
 
 #inside-input {
