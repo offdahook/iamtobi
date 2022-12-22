@@ -53,8 +53,8 @@
   }
 
   :root {
-    --highlightBlue: #3da6a8;
-    --highlightRed: #722f46;
+    --highlightBlue: #009498;
+    --highlightRed: #4f0013;
   }
 
  nav ul li a:hover, .forgot-password a span:hover,
@@ -147,6 +147,7 @@ section {
 
 .jumbo {
     padding:0;
+    height:100vh;
 }
 
 .space-top {
