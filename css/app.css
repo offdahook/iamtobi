@@ -53,6 +53,8 @@
   }
 
   :root {
+    --dark: #252525;
+    --white: #fff;
     --highlightBlue: #009498;
     --highlightRed: #4f0013;
   }
@@ -63,23 +65,49 @@
 }
 
 a {
-    color:white;
     text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: var(--highlightBlue);
 }
 
 /*
-{
-    color: var(--highlightRed);
-}
+  Colours
 */
 
 body {
-    background-color: #000;
-    color:white;
+  background-color: var(--dark);
+}
+
+{
+  background-color: var(--highlightBlue);
+}
+
+/* {
+  background-color: var(--highlightRed);
+}*/
+
+body {
+  color: var(--white);
+}
+
+a {
+  color: var(--highlightBlue);
+}
+
+a:hover {
+  color: var(--highlightRed);
+}
+
+
+/*
+  Helper Classes
+*/
+
+
+
+body {
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -98,9 +126,9 @@ body {
   justify-content: space-around;
 }  
 
-.main-nav { grid-area: 1 / 1 / 2 / 2; display: flex;}
-.logo { grid-area: 1 / 2 / 2 / 3; display:grid; place-content: center;}
-.alt-nav { grid-area: 1 / 3 / 2 / 4; display:flex;  justify-content: flex-end;}
+#main-nav { grid-area: 1 / 1 / 2 / 2; display: flex;}
+#logo { grid-area: 1 / 2 / 2 / 3; display:grid; place-content: center;}
+#alt-nav { grid-area: 1 / 3 / 2 / 4; display:flex;  justify-content: flex-end;}
 
 nav ul {
     list-style: none;
@@ -227,6 +255,37 @@ form input:focus{
     float:right;
     padding:10px 0;
     font-size: 0.7rem;
+}
+
+
+.default-button {
+  width: clamp(50px,100px,120px);
+  display:flex;
+  border: solid 1px #ffffff;
+  justify-content: center;
+  margin:15px 0;
+  padding: 5px 0;
+  font-size: .8rem;
+  float: left;
+}
+
+.default-button:hover{
+  background-color: var(--highlightRed);
+}
+
+.text-link {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin:15px 0;
+  padding: 5px 0;
+}
+
+#inside-input {
+display: grid;
+}
+
+.small-text {
+  font-size: .75rem;
 }
 
 

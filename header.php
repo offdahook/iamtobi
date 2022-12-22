@@ -15,16 +15,16 @@
 </head>
 
 <nav class="navbar" id="navbar">
-    <div class="main-nav">
+    <div id="main-nav">
         <ul class="main-nav">
             <li class="nav-item"><a href="/">Über mich</a></li>
             <li class="nav-item"><a href="blog.php">Blog</a></li>
         </ul>
     </div>
-    <div class="logo" id="logo">
+    <div id="logo" id="logo">
         <a href="/"><img src="stock/logos/iamtobi.png" alt="OFFDAHOOK-Logo in Desktop-Version"></a>
     </div>
-    <div class="alt-nav">
+    <div id="alt-nav">
         <ul class="social-nav">
             <li class="social-nav-item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li class="social-nav-item"><a href="login.php"><i class="fa-solid fa-user"></i></a></li>
