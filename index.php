@@ -1,8 +1,6 @@
 <?php 
     include_once 'header.php';
 ?>
-
-
     <section id="jumbo" class="jumbo">
     </section>
 

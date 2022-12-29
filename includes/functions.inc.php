@@ -1,6 +1,6 @@
 <?php
     
-    require_once 'generatemailverification.php';
+    require_once 'generatemailverification.inc.php';
 
     function emptyInputRegister($firstname, $lastname, $email, $pwd) {
         $result;
